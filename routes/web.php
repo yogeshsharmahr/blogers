@@ -20,12 +20,12 @@ Route::get('/', function () {
 Auth::routes();
 // admin
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/add/post/','PostController@create')->name('add.post');
-Route::post('/post/added/','PostController@store')->name('posts.store');
-Route::get('all/Post/','PostController@index')->name('posts.index');
-Route::get('add/Video','VideoController@create')->name('create.video');
-Route::post('post/video','VideoController@store')->name('store.video');
-Route::get('all/video','VideoController@index')->name('all.video');
+Route::get('/add/post/','PostController@create')->name('add.post')->middleware('auth');
+Route::post('/post/added/','PostController@store')->name('posts.store')->middleware('auth');
+Route::get('all/Post/','PostController@index')->name('posts.index')->middleware('auth');
+Route::get('add/Video','VideoController@create')->name('create.video')->middleware('auth');
+Route::post('post/video','VideoController@store')->name('store.video')->middleware('auth');
+Route::get('all/video','VideoController@index')->name('all.video')->middleware('auth');
 //front
 Route::get('blogs/','PostController@show')->name('show.post');
 Route::get('blogs/{slug}','PostController@single_post')->name('single.post');
