@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <form class="new-added-form" method="post" action="{{ route('posts.store') }}">
-                            <div class="row">
+                            <div class="row" enctype="multipart/form-data">
                                  @csrf
                                 <div class="col-xl-12 col-lg-6 col-12 form-group">
                                     <label>Title *</label>

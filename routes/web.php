@@ -26,6 +26,9 @@ Route::get('all/Post/','PostController@index')->name('posts.index')->middleware(
 Route::get('add/Video','VideoController@create')->name('create.video')->middleware('auth');
 Route::post('post/video','VideoController@store')->name('store.video')->middleware('auth');
 Route::get('all/video','VideoController@index')->name('all.video')->middleware('auth');
+Route::get('events/','VideoController@events_create')->name('events.admin');
+Route::post('add/events','VideoController@store')->name('add_new.event');
+
 //front
 Route::get('blogs/','PostController@show')->name('show.post');
 Route::get('blogs/{slug}','PostController@single_post')->name('single.post');

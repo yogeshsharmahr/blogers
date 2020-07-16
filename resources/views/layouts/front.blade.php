@@ -16,6 +16,34 @@
     <link href="{{asset('/public/front/css/style_1.css') }}" rel="stylesheet" type="text/css"/>
     <!-- Modernizr JS -->
     <script src="{{asset('/public/front/js/modernizr-3.5.0.min.js') }}"></script>
+    <style>
+
+
+
+.notification {
+  
+  
+ 
+  
+ 
+  
+
+}
+
+
+
+.notification .badge {
+  position: relative;
+  top: -12px;
+  right: -1px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+
+</style>
+
 </head>
 <body>
 <div class="container-fluid">
@@ -40,6 +68,12 @@
                 <div class="text-center d-inline-block">
                     <a href="https://fb.com/fh5co" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div></a>
                 </div>
+                <div class="text-center d-inline-block">
+                    <a href="{{route('login')}}" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-user"></i></div></a>
+                </div>
+                 <div class="text-center d-inline-block">
+                    <a href="{{route('register')}}" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-sign-out"></i></div></a>
+                </div>
                 <!--<div class="d-inline-block text-center"><img src="images/country.png" alt="img" class="fh5co_country_width"/></div>-->
                 <div class="d-inline-block text-center dd_position_relative ">
                     <select class="form-control fh5co_text_select_option">
@@ -49,6 +83,11 @@
                         <option>Spanish </option>
                     </select>
                 </div>
+
+
+                
+                
+
                 <div class="clearfix"></div>
             </div>
         </div>
@@ -73,10 +112,24 @@
                         <a class="nav-link" href="single.html">Single <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">World <span class="sr-only">(current)</span></a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton2 " data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+
+                           News<span class="sr-only">unread messages</span></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
                             <a class="dropdown-item" href="#">Action in</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="notification nav-link dropdown-toggle" id="dropdownMenuButton2 " data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                               Videos<span class="sr-only">unread messages</span>
+                           <span class="badge">3</span>
+                                   </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
+                                        <a class="dropdown-item" href="#">Action in</a>
                             <a class="dropdown-item" href="#">Another action</a>
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
@@ -90,6 +143,7 @@
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li>
+                   
                     <li class="nav-item ">
                         <a class="nav-link" href="Contact_us.html">Contact <span class="sr-only">(current)</span></a>
                     </li>

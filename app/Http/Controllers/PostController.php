@@ -38,26 +38,22 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-  $request->validate([
-            'title'=>'required',
-            'body'=>'required',
-            
-        ]);
+ 
         
   
-
-    if($request->hasFile('image')){
+ if($request->hasFile('image')){
 
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $path = public_path().'/uploads/';
-            return $file->move($path, $filename);
+            $path = public_path().'/images/';
+            $file->move($path, $filename);
         }
 
          $employees = new Post;
          $employees->title=$request->title;
          $employees->slug=Str::slug($request->title);
          $employees->categories=implode(',', $request->input('categories'));
+        
          $employees->body=$request->body;
         
          $employees->save();

@@ -35,7 +35,26 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+   
+         
+        
+         if($request->hasFile('file')){
+
+            $file = $request->file('file');
+            $filename = $file->getClientOriginalName();
+            $path = public_path().'/videos/';
+            $file->move($path, $filename);
+        }
+        $videos = new Video;
+        $videos->event_title=$request->event_title;
+        $videos->event_link=$request->event_link;
+        $videos->event_date=$request->event_date;
+        $videos->file=$filename;
+        $videos->description=$request->message;
+        $events=$videos->save();
+        if($events){
+             return redirect()->back()->with('message','Hi There Thank You For Making a Event');
+        }
     }
 
     /**
@@ -81,5 +100,8 @@ class VideoController extends Controller
     public function destroy(Video $video)
     {
         //
+    }
+    public function events_create(){
+        return view('events/set_event');
     }
 }

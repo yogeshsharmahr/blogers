@@ -288,6 +288,10 @@
                             <a href="{{route('create.video')}}" class="nav-link"><i
                                     class="flaticon-upload"></i><span>Add Videos</span></a>
                           </li>
+                           <li class="nav-item">
+                            <a href="{{route('events.admin')}}" class="nav-link"><i
+                                    class="flaticon-upload"></i><span>Add Event</span></a>
+                          </li>
                     </ul>
                 </div>
             </div>
