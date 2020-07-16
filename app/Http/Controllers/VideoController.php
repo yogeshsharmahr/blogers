@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class VideoController extends Controller
 {
@@ -47,6 +48,7 @@ class VideoController extends Controller
         }
         $videos = new Video;
         $videos->event_title=$request->event_title;
+        $videos->slug=Str::slug($request->event_title);
         $videos->event_link=$request->event_link;
         $videos->event_date=$request->event_date;
         $videos->file=$filename;

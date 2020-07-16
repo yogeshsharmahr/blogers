@@ -111,28 +111,13 @@
                     <li class="nav-item ">
                         <a class="nav-link" href="single.html">Single <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton2 " data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">
-
-                           News<span class="sr-only">unread messages</span></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                            <a class="dropdown-item" href="#">Action in</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="notification nav-link dropdown-toggle" id="dropdownMenuButton2 " data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">
-                               Videos<span class="sr-only">unread messages</span>
-                           <span class="badge">3</span>
+                   
+                    <li class="nav-item ">
+                        <a href="{{route('show.events')}}" class="notification nav-link">
+                               News<span class="sr-only">unread messages</span>
+                           <span class="badge">New</span>
                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                                        <a class="dropdown-item" href="#">Action in</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
+                                   
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton3" data-toggle="dropdown"

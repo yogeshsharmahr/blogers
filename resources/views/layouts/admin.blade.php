@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{asset('public/admin/css/all.min.css') }}">
     <!-- Flaticon CSS -->
     <link rel="stylesheet" href="{{asset('public/admin/fonts/flaticon.css') }}">
+    <link rel="stylesheet" href="{{asset('public/admin/css/datepicker.min.css') }}">
      <link rel="stylesheet" href="{{asset('/public/admin/css/select2.min.css') }}">
     <!-- Full Calender CSS -->
     <link rel="stylesheet" href="{{asset('public/admin/css/fullcalendar.min.css') }}">
@@ -328,6 +329,7 @@
     <!-- Chart Js -->
     <script src="{{asset('public/admin/js/Chart.min.js') }}"></script>
     <script src="{{asset('public/admin/js/select2.min.js') }}"></script>
+    <script src="{{asset('public/admin/js/datepicker.min.js') }}"></script>
     <!-- Custom Js -->
     <script src="{{asset('public/admin/js/main.js') }}"></script>
 

@@ -17,6 +17,7 @@ class CreateVideosTable extends Migration
             $table->increments('id');
             $table->string('event_title');
             $table->string('event_link');
+            $table->string('slug');
             $table->string('event_date');
             $table->string('file');
             $table->text('description');
