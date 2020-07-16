@@ -4,7 +4,7 @@
 <div class="container">
 	@foreach($post as $posts)
     <div class="page-title">
-        <img src="{{asset('public/front/images/nick-karvounis-78711.jpg')}}" class="client_logos"  alt="Free HTML5 by FreeHTMl5.co">
+        <img src='{{ asset('public/product_image/'.$posts->image) }}' class="client_logos"  alt="Free HTML5 by FreeHTMl5.co">
     </div>
         <span>{{ $posts->created_at }}</span>
         <h2>{{ $posts->title }}</h2>

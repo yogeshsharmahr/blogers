@@ -1,21 +1,18 @@
-@extends('layouts.front')
-   
+@extends('layouts.front')   
 @section('content')
 <div class="container-fluid pb-4 pt-4 paddding">
     <div class="container paddding">
         <div class="row mx-0">
             <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
                 <div>
-                    <div class="fh5co_headingfh5co_heading_border_bottom py-2 mb-4">Blogs</div>
-
-                  
-                 
+                    <div class="fh5co_headingfh5co_heading_border_bottom py-2 mb-4">Blogs</div> 
                 </div>
                 @foreach($post as $posts)
                 <div class="row pb-4">
                     <div class="col-md-5">
                         <div class="fh5co_hover_news_img">
-                            <div class="fh5co_news_img"><img src="images/nathan-mcbride-229637.jpg" alt=""/></div>
+                            <div class="fh5co_news_img">
+                    <img src='{{ asset('public/product_image/'.$posts->image) }}' alt=""/></div>
                             <div></div>
                         </div>
                     </div>
@@ -27,10 +24,7 @@
                         </div>
                     </div>
                 </div>
-                
-              
                 @endforeach
-               
         <div class="row mx-0">
             <div class="col-12 text-center pb-4 pt-4">
                 <a href="#" class="btn_mange_pagging"><i class="fa fa-long-arrow-left"></i>&nbsp;&nbsp; Previous</a>

@@ -17,6 +17,7 @@ class CreatePostsCommentsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('body');
+            $table->string('slug');
             $table->string('categories');
             $table->string('image');
             $table->timestamps();

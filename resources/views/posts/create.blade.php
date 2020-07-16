@@ -44,17 +44,22 @@
                                 </div>
                             </div>
                         </div>
-                        <form class="new-added-form" method="post" action="{{ route('posts.store') }}">
+
+
+
+
+
+                        <form class="new-added-form" method="post" action="{{ route('posts.store') }}" enctype="multipart/form-data">
                             <div class="row">
                                  @csrf
                                 <div class="col-xl-12 col-lg-6 col-12 form-group">
-                                    <label>Title *</label>
-                                    <input type="text" placeholder="" class="form-control" name="title" required>
+                                    <label>Title==== *</label>
+                                    <input type="text" placeholder="" class="form-control" name="title">
                                 </div>
                                 
                                 <div class="col-xl-6 col-lg-6 col-12 form-group">
                                     <label>Post Category *</label>
-                                    <select class="select2" name="categories[]" required>
+                                    <select class="select2" name="categories[]">
                                         <option selected disabled>Please Select Group *</option>
                                         <option value="News">News</option>
                                         <option value="Sports">Sports</option>
@@ -71,7 +76,7 @@
                                 <div class="col-lg-12 col-12 form-group">
                                     <label>Short BIO</label>
                                     <textarea class="textarea form-control" name="body"  id="form-message" cols="10"
-                                        rows="9" required></textarea>
+                                        rows="9" ></textarea>
                                 </div>
                                 
                                 <div class="col-12 form-group mg-t-8">
@@ -80,6 +85,11 @@
                                 </div>
                             </div>
                         </form>
+
+
+
+
+                        
                     </div>
                 </div>
 @endsection
