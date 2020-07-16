@@ -35,7 +35,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
+
  
         
   
@@ -47,13 +47,13 @@ class PostController extends Controller
             $file->move($path, $filename);
         }
 
-=======
+
             $request->validate([
             'title'=>'required',
             'body'=>'required',
             
         ]);
->>>>>>> aaee4a99b3230c459b3c677916deca8a0b6dbe7c
+
          $employees = new Post;
          $employees->title=$request->title;
          $employees->slug=Str::slug($request->title);
