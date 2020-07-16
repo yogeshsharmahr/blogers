@@ -110,20 +110,6 @@ $(document).ready(function(){
   });
 });
 </script>
-  <script>
-    $(function(){
-       $('#button').click(function() {
-            $.ajax({
-                url: '',
-                type: 'post',
-                data: { id: 1 },
-                success: function(response)
-                {
-                    $('#something').html(response);
-                }
-            });
-       });
-    });    
-</script>                                  
+                              
            
 @endsection
