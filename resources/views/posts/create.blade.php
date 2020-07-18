@@ -44,10 +44,10 @@
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
+
                         <form class="new-added-form" method="post" action="{{ route('posts.store') }}">
                             <div class="row" enctype="multipart/form-data">
-=======
+
 
 
 
@@ -55,10 +55,10 @@
 
                         <form class="new-added-form" method="post" action="{{ route('posts.store') }}" enctype="multipart/form-data">
                             <div class="row">
->>>>>>> aaee4a99b3230c459b3c677916deca8a0b6dbe7c
+
                                  @csrf
                                 <div class="col-xl-12 col-lg-6 col-12 form-group">
-                                    <label>Title==== *</label>
+                                    <label>Title </label>
                                     <input type="text" placeholder="" class="form-control" name="title">
                                 </div>
                                 

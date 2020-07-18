@@ -30,7 +30,7 @@ Route::post('post/video','VideoController@store')->name('store.video')->middlewa
 Route::get('all/video','VideoController@index')->name('all.video')->middleware('admin');
 Route::get('events/','VideoController@events_create')->name('events.admin')->middleware('admin');
 Route::post('add/events','VideoController@store')->name('add_new.event')->middleware('admin');
-
+Route::get('update/status/{id}/{status}/','PostController@update')->name('post.status')->middleware('admin');
 //front
 Route::get('blogs/','PostController@show')->name('show.post');
 Route::get('blogs/{slug}','PostController@single_post')->name('single.post');

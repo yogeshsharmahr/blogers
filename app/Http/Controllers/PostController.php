@@ -3,7 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use Illuminate\Support\Str;
-   
+use Illuminate\Support\Facades\DB;
 class PostController extends Controller
 {
     /**
@@ -82,7 +82,7 @@ class PostController extends Controller
      */
     public function show()
     {
-    	$post = Post::all();
+    	$post = Post::where('status',1)->get();
         
         return view('posts/show', compact('post'));
     }
@@ -91,6 +91,16 @@ class PostController extends Controller
    
         $post =Post::where('slug',$slug)->get();
         return view ('posts.singlepost',compact('post'));
+
+    }
+    public function update($id,$request){
+      
+     $status = DB::table('posts')
+              ->where('id', $id)
+              ->update(['status' => $request]);
+      if($status){
+        return redirect()->back()->with('message','Hi There Thank you For Update post Status');
+      }
 
     }
 }

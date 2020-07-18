@@ -2,7 +2,7 @@
    
 @section('content')
 <div class="container">
- <!-- Sidebar Area End Here -->
+ 
             <div class="dashboard-content-one">
                 <!-- Breadcubs Area Start Here -->
                 <div class="breadcrumbs-area">
@@ -14,6 +14,12 @@
                         <li>All Students</li>
                     </ul>
                 </div>
+                   <!-- Breadcubs Area End Here -->
+                @if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+@endif
                 <!-- Breadcubs Area End Here -->
                 <!-- Student Table Area Start Here -->
                 <div class="card height-auto">
@@ -81,17 +87,28 @@
                                             </div>
                                         </td>
                                        
-                                         <td>{{ Str::limit($post->title,35) }}</td>
+                                         <td>{{ Str::limit($post->title,25) }}</td>
                                          <td class="text-center"><img src="{{asset('/public/admin/img/figure/student3.png') }}" alt="student"></td>
                                        
                                         
                                         <td>Admin</td>
-                                        <td>{{ $post->created_at }}</td>
-
-                                        <td>Publish/Pending</td>
+                                    <td>{{ $post->created_at }}</td>
+                                        @if(($post->status) ==1 ){
+                                        <td><button class="btn btn-Success">Publish</button></td>
+                                    }
+                                     @elseif(($post->status) == 0){
+                                     <td><button class="btn btn-warning">Pending</button></td>
+                                 }
+                                 @else{
+                                  <td ><button class="btn btn-danger">Disable</button></td>
+                             } 
+                             @endif  
                                         
                                         
-                                        
+                                        <td>
+                        <a href="{{url ('/update/status/'.$post->id)}}/1"class="btn btn-primary">Enable</a>
+                        <a href="{{url ('/update/status/'.$post->id)}}/2" value="1" class="btn btn-danger">Disable</a>
+                                        </td>
                                         <td><a href="" class="btn btn-danger">View Post</a></td>
                                         <td>
                         <a href="" class="btn btn-primary">View Post</a>
@@ -104,4 +121,6 @@
                         </div>
                     </div>
                 </div>
+
+
 @endsection
